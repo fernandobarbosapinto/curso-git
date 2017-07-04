@@ -181,3 +181,9 @@ git branch -d  ajustes /remove a branch local/
 ```
 *este comando remove uma branch, porém somente se ela estiver sincronizada com outra. Senão, é necessário forçar com a opção -D.*
 
+Num repositório remoto, as alterações são realizadas, geralmente, por mais de uma pessoa ao mesmo tempo. Como saber se foram criadas branches novas no repositório remoto?
+
+```
+git fetch origin
+```
+O comando **git mergetool --tool-help** mostra no console uma lista de programas possíveis de ser utilizados. Dessa lista, pode-se escolher um, instalar no seu computador e utilizar através do comando **git mergetool -t nome_do_programa**.
