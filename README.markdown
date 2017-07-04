@@ -1,6 +1,6 @@
-#Trabalhando com GIT
+# Trabalhando com GIT
 
-##Instalando o GIT no Linux[UBUNTU]
+## Instalando o GIT no Linux[UBUNTU]
 
 ```
 sudo apt-get install openssl git-core
@@ -23,7 +23,7 @@ id_rsa.pub
 Ábrir o arquivo id_rsa.pub em um editor de texto simples([TextEditor, Bloco de Notas, GEdit, notepad++, sublime]) e copiar o conteúdo da chave ssh para utilizar nas configurações do github.
 
 
-##Comandos Básicos do GIT
+## Comandos Básicos do GIT
 
 ```
 git clone https://github.com/fernandobarbosapinto/curso-git.git
@@ -94,7 +94,7 @@ Comando utilizado para visualização dos commits, é possível também executar
 
 
 
-##Configuração do repositório do remoto GIT
+## Configuração do repositório do remoto GIT
 
 Para conseguirmos compartilhar nosso projeto HTML, precisamos indicar que o diretório do nosso projeto apontará para um repositório remoto. Para realizarmos esse processo, o Git possui o comando git remote add, com o qual podemos indicar a localização do repositório remoto e o nome que queremos dar para ele (um apelido ou alias).
 
@@ -104,20 +104,20 @@ git remote add origin https://github.com/fernandobarbosapinto/curso-git.git
 ```
 Uma convenção adotada é a utilização do nome do repositório remoto como "origin". No entanto, qualquer outro nome pode ser utilizado. Em seguida, devemos saber também a URI do repositório, que é um caminho único que indica o local onde ele ficará armazenado. O próprio Github, segue uma convenção com relação à URI de seus repositórios, sendo a seguinte:
 
-###https://github.com/[nome_do_usuario]/[nome_do_repositorio].git
+### https://github.com/[nome_do_usuario]/[nome_do_repositorio].git
 
 Com isso, para o nosso projeto, teremos o seguinte caminho:
 
-###https://github.com/[seu_nome_do_usuario]/curso-git.git
+### https://github.com/[seu_nome_do_usuario]/curso-git.git
 
-##Enviando os commits locais para o repositório remoto
+## Enviando os commits locais para o repositório remoto
 
 Para isso, uma vez que o repositório já tenha sido inicializado com o comando git init, os commits locais já tenham sido realizados e o repositório remoto configurado, basta executarmos o comando git push, indicando qual é o repositório remoto para onde os commits serão enviados e a branch que será enviada para o servidor. O repositório remoto será o "origin", que acabamos de configurar, enquanto a branch será a "master", criada por padrão sempre que um repositório é criado.
 
 ```
 git push origin master
 ```
-##Sincronização com as novas alterações do repositório remoto
+## Sincronização com as novas alterações do repositório remoto
 
 Para que a sincronização seja realizada e o desenvolvedor tenha em seu computador as novas versões dos arquivos, basta que ele execute o comando:
 
