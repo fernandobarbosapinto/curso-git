@@ -104,10 +104,11 @@ git remote add origin https://github.com/fernandobarbosapinto/curso-git.git
 ```
 Uma convenção adotada é a utilização do nome do repositório remoto como "origin". No entanto, qualquer outro nome pode ser utilizado. Em seguida, devemos saber também a URI do repositório, que é um caminho único que indica o local onde ele ficará armazenado. O próprio Github, segue uma convenção com relação à URI de seus repositórios, sendo a seguinte:
 
-**https://github.com/[nome_do_usuario]/[nome_do_repositorio].git**
+###https://github.com/[nome_do_usuario]/[nome_do_repositorio].git
+
 Com isso, para o nosso projeto, teremos o seguinte caminho:
 
-**https://github.com/[seu_nome_do_usuario]/curso-git.git**
+###https://github.com/[seu_nome_do_usuario]/curso-git.git
 
 ##Enviando os commits locais para o repositório remoto
 
