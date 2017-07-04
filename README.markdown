@@ -156,8 +156,28 @@ E como podemos visualizar as branches já existentes em um repositório remoto?
 ```
 git branch -r
 ```
+Esta opção mostra todas as branches, locais e remotas!
+
+```
+git branch -a
+```
 Uma vez visto as branches remotas, como copiar uma delas para a máquina local? Isso é feito passando o nome do repositório e da branch remota ao comando git branch, além de indicar o nome da branch que será criada. Mais uma vez, temos o problema de indicar o caminho entre as branches. Para este caso, a opção -t resolve.
 
 ```
 git branch -t ajustes origin/ajustes
 ```
+
+Uma tarefa bem comum é a criação de uma nova branch seguida da troca para essa branch criada. Poderíamos fazer isso com a sequência de comandos **git branch nomeDaBranch** e **git checkout nomeDaBranch**. Mas podemos facilitar isso utilizando a opção -b seguida de qualquer um desses comandos:
+
+```
+git checkout -b ajustes 
+git branch -b ajustes
+```
+Uma vez terminada a tarefa pela qual uma branch foi criada, desejamos deletá-la para não poluir muito o nosso projeto com branches que não serão mais utilizadas. Para tal, passa-se um opção ao comando git branch.
+
+```
+git branch -d  origin ajustes /remove a branch remota/
+git branch -d  ajustes /remove a branch local/
+```
+*este comando remove uma branch, porém somente se ela estiver sincronizada com outra. Senão, é necessário forçar com a opção -D.*
+
