@@ -7,7 +7,7 @@ sudo apt-get install openssl git-core
 ```
 Siga as instruções do prompt de comando, primeiro confirmando a instalação dos pacotes e suas dependências, depois confirmando a instalação do pacote git-core
 
-##Criando uma chave SSH para utilizar no [GITHUB](https://github.com)
+## Criando uma chave SSH para utilizar no [GITHUB](https://github.com)
 
 ```
 ssh-keygen -t rsa -C "seu_email@provedor.com"
@@ -123,4 +123,41 @@ Para que a sincronização seja realizada e o desenvolvedor tenha em seu computa
 
 ```
 git pull origin master.
+```
+## Trabalhando com Branch
+
+Sabemos que a utilização de branches facilita no dia a dia do desenvolvedor. Mas como criar uma nova branch? Para tal, utilizamos o comando git branch.
+
+```
+git branch ajustes
+```
+Comando utilizado para criar uma branch.
+
+```
+git branch
+```
+Comando utilizado para visualizar as branchs existentes, lembrando que a branch padrão é a *master.
+
+```
+git checkout ajustes
+```
+Comando utilizado para setar a branch a ser utilizada. Assim todas as alterações relalizadas serão feitas na branch "ajustes".
+
+## Compartilhando uma Branch local com mais desenvolvedores
+
+ Isso é feito utilizando o comando git push passando dois argumentos: o primeiro é o nome do repositório e o segundo, o nome da branch que deseja-se enviar.Porém, toda vez que atualizarmos tanto o nosso projeto local quanto o projeto remoto, precisaremos indicar qual o repositório e o nome da branch que a nossa branch local se refere no remoto, isto é, precisaremos digitar git pull origin design e git push origin design para atualizar os repositórios locais e remotos, respectivamente. Para evitar tal trabalho, podemos indicar o caminho (track) da branch remota para a nossa branch local. Isso pode ser feito no instante em que criamos a branch remota através da opção "-u". No nosso caso, temos:
+
+```
+git push -u origin ajustes
+```
+
+E como podemos visualizar as branches já existentes em um repositório remoto?
+
+```
+git branch -r
+```
+Uma vez visto as branches remotas, como copiar uma delas para a máquina local? Isso é feito passando o nome do repositório e da branch remota ao comando git branch, além de indicar o nome da branch que será criada. Mais uma vez, temos o problema de indicar o caminho entre as branches. Para este caso, a opção -t resolve.
+
+```
+git branch -t ajustes origin/ajustes
 ```
