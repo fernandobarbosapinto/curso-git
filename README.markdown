@@ -94,7 +94,7 @@ Comando utilizado para visualização dos commits, é possível também executar
 
 
 
-## Configuração do repositório do remoto GIT
+## Configuração do repositório remoto GIT
 
 Para conseguirmos compartilhar nosso projeto HTML, precisamos indicar que o diretório do nosso projeto apontará para um repositório remoto. Para realizarmos esse processo, o Git possui o comando git remote add, com o qual podemos indicar a localização do repositório remoto e o nome que queremos dar para ele (um apelido ou alias).
 
