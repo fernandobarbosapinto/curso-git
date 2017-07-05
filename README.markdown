@@ -89,6 +89,12 @@ Ao executarmos o comando [git whatchanged -p] é possível visualizar quais as l
 
 ```
 git log
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+git log -p
+git log --graph
+git log --pretty='%an realizou o commit %h: %s'
 ``` 
 Comando utilizado para visualização dos commits, é possível também executar o comando git log em um prompt, no diretório de um projeto, que mostrará informações como o autor, a data e hora e a mensagem de commit utilizada.
 
