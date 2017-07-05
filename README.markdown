@@ -10,7 +10,7 @@ Siga as instruções do prompt de comando, primeiro confirmando a instalação d
 ## Criando uma chave SSH para utilizar no [GITHUB](https://github.com)
 
 ```
-**ssh-keygen -t rsa -C "seu_email@provedor.com"**
+ssh-keygen -t rsa -C "seu_email@provedor.com"
 ```
 Lembre-se de substituir seu_email@provedor.com pelo seu endereço real de email. A resposta do terminal vai perguntar em qual local do seu disco você quer salvar sua chave de segurança. Para evitar problemas, mantenha a opção padrão. A seguir, será solicitada a entrada de uma senha para a chave de segurança. Caso o computador seja público ou compartilhado, é recomendado que sua chave esteja protegida por uma senha. 
 
