@@ -92,7 +92,52 @@ git log
 ``` 
 Comando utilizado para visualização dos commits, é possível também executar o comando git log em um prompt, no diretório de um projeto, que mostrará informações como o autor, a data e hora e a mensagem de commit utilizada.
 
+```
+git checkout nome-do-arquivo.txt
+``` 
+Comando também utilizado para voltar as alterações que foram feitas mas não estão prontas para commit.
 
+```
+git reset HEAD nome-do-arquivo.txt (comando utilizado para retirar do estado de INDEX)
+git checkout nome-do-arquivo.txt
+```
+Comando também utilizado para voltar as alterações que foram feitas e já estão prontas para commit (foi feito git add).
+
+```
+git log
+git reset [copiar a hash do commit que deseja voltar que vai aparecer no git log]
+```
+Comando utilizado para voltar um commit.
+
+```
+git reset --hard HEAD~1
+```
+Usando esse comando, descartamos definitivamente as mudanças feitas no último commit.
+
+```
+git revert [copiar a hash do commit que deseja voltar que vai aparecer no git log]
+```
+Comando utilizado para voltar um commit qualquer seja ele atual ou antigo.
+
+```
+git stash
+```
+Comando utilizado para guardar alterações temporariamente. Para retornar ao ponto aonde parou basta usar **git stash pop. E se a gente quiser saber se há algum estado salvo via git stash? Isso pode ser feito listando todos os stashes salvos no momento com o comando git stash list. Cada um dos estados salvo é nomeado da seguinte maneira: "WIP on [nome_do_branch]: [hash] [mensagem_do_commit_head]". Também há uma referência ao stash com stash@{0} por exemplo, para o último stash criado. Caso houvessem outros, as referências seriam stash@{1}, stash@{2} e assim por diante.
+
+O comando git stash pop utiliza como padrão o último stash criado. Para aplicar alterações de um stash mais antigo, usamos sua referência:
+
+```
+git stash pop stash@{1}
+```
+```
+git stash apply
+```
+Usando a opção apply, recuperamos as últimas alterações da pilha sem removê-las.
+
+```
+git stash drop
+```
+Este comando faz com que o último estado salvo seja apagado. Também podemos utilizar o nome de cada elemento do stash para remover algum estado que não seja o último. Por fim, se quisermos excluir todos os estados, podemos utilizar o comando git stash clear.
 
 ## Configuração do repositório remoto GIT
 
