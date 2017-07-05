@@ -195,8 +195,8 @@ Quando estamos no meio do processo de rebase, e houve um conflito que devemos tr
 ** A branch (no branch), que dá a entender que você não está em branch nenhuma, é apenas temporária, criada pelo Git para que possamos resolver o conflito. **
 
 * (no branch)
-  desenvolvimento
-  master
+* desenvolvimento
+* master
 
 No processo de rebase, quando há um conflito, temos 3 opções: continue, abort e skip. Podemos continuar um rebase a partir do ponto de conflito, abortar o rebase e voltar ao estado original ou pular o conflito para lidar com ele mais pra frente.
 
